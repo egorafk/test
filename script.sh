@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 LOG="/var/log/monitoring.log"
 PID_FILE="/tmp/test.pid"
 URL="https://test.com/monitoring/test/api"
