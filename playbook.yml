@@ -1,0 +1,28 @@
+- name: Install packages
+  hosts: webservers1
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: {{ package1 }}
+        state: present
+
+    - name: Starting nginx
+      service:
+        name: {{ package1 }}
+        state: started
+        enabled: yes
+
+
+    - name: Install htop
+      apt:
+        name: {{ package2 }}
+        state: present
+
+    - name: Install curl
+      apt:
+        name: {{ package3 }}
+        state: present
+
+
